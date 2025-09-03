@@ -13,7 +13,7 @@ export default function Section() {
       {/* Conteúdo */}
       <div className="relative z-10 text-center px-4">
         <h2 className="text-5xl md:text-6xl font-bold text-green-600">
-        Júlia Madeira Soares
+          Júlia Madeira Soares
         </h2>
 
         <p className="text-lg md:text-xl mb-4 text-gray-900">
@@ -33,7 +33,15 @@ export default function Section() {
           </span>
         </p>
 
-        <button className="bg-white text-green-600 mt-5 mb-20 px-9 py-4 rounded-full font-semibold shadow">
+        <button
+          onClick={() =>
+            window.open(
+              "https://wa.me/5553991520395?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
+              "_blank"
+            )
+          }
+          className="bg-white text-green-600 mt-5 mb-20 px-9 py-4 rounded-full font-semibold shadow"
+        >
           Agende sua consulta
         </button>
 
