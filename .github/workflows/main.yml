@@ -1,0 +1,38 @@
+# Nome do seu workflow
+name: Deploy to Hostinger (Sync Build Folder)
+
+# Gatilho: Roda em todo push na branch 'main'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixa o código do seu repositório (incluindo a pasta 'build')
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Envia APENAS o conteúdo da pasta 'build' para a Hostinger
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: sftp
+          port: 22
+          
+          # --- A MÁGICA ACONTECE AQUI ---
+          # Diretório local que será enviado. Certifique-se de que o nome está correto.
+          local-dir: ./build/ # <<< MUITO IMPORTANTE: Mude para './dist/' se seu projeto usar 'dist'.
+          
+          # Diretório no servidor para onde os arquivos serão enviados.
+          server-dir: /home/${{ secrets.FTP_USERNAME }}/public_html/
+
+          # Opcional: Limpa o diretório de destino antes de enviar os novos arquivos.
+          # Ajuda a remover arquivos antigos que não existem mais na nova build. Use com cuidado!
+          # clean: true
