@@ -1,45 +1,35 @@
-# Nome do workflow atualizado
-name: Deploy to Hostinger via SFTP
+name: Deploy to Hostinger via SFTP (SSH Key)
 
-# Gatilho: Roda em todo push na branch 'main'
 on:
   push:
     branches:
       - main
 
 jobs:
+  # O job 'deploy' começa aqui, sem espaços.
   deploy:
+    # 'runs-on' tem dois espaços.
     runs-on: ubuntu-latest
 
+    # 'steps' também tem dois espaços.
     steps:
-      # 1. Baixa o código do seu repositório (incluindo a pasta 'build')
+      # O '-' do passo começa com quatro espaços.
       - name: Checkout code
         uses: actions/checkout@v3
 
-        # ... (passo 'Checkout code' fica aqui em cima)
-
-      # NOVO PASSO PARA DESCOBRIR O IP
+      # Este é o passo de teste que adicionamos.
       - name: Print Runner IP address
         run: echo "O endereço de IP deste servidor é:" && curl -s ifconfig.me
 
-      # O PASSO DE DEPLOY VEM DEPOIS
+      # O próximo passo, também começa com quatro espaços.
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@v5.0.0
-        # ... (o resto do seu código de deploy)
-
-      # 2. Deploy para Hostinger usando a Action correta para SFTP/SSH
-      - name: Deploy to Hostinger
-        uses: easingthemes/ssh-deploy@v5.0.0 # <<< Usando a nova Action
+        # 'with:' tem seis espaços.
         with:
-          # Credenciais (reutilizando os Secrets que você já criou)
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Pode deixar assim mesmo que não use chave
+          # Cada parâmetro dentro do 'with' tem oito espaços.
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.FTP_SERVER }}
           REMOTE_USER: ${{ secrets.FTP_USERNAME }}
-          REMOTE_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-
-          # Pastas de origem e destino
-          SOURCE: "build/" # <<< MUITO IMPORTANTE: Mude para "dist/" se seu projeto usar 'dist'.
+          SOURCE: "build/" # Ou "dist/"
           TARGET: "public_html"
-
-          # Opção para excluir arquivos no destino que não existem na origem (limpa a build antiga)
           ARGS: "--delete"
