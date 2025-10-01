@@ -1,5 +1,5 @@
-# Nome do seu workflow
-name: Deploy to Hostinger (Sync Build Folder)
+# Nome do workflow atualizado
+name: Deploy to Hostinger via SFTP
 
 # Gatilho: Roda em todo push na branch 'main'
 on:
@@ -16,23 +16,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Envia APENAS o conteúdo da pasta 'build' para a Hostinger
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      # 2. Deploy para Hostinger usando a Action correta para SFTP/SSH
+      - name: Deploy to Hostinger
+        uses: easingthemes/ssh-deploy@v5.0.0 # <<< Usando a nova Action
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
-          port: 22
-          
-          # --- A MÁGICA ACONTECE AQUI ---
-          # Diretório local que será enviado. Certifique-se de que o nome está correto.
-          local-dir: ./build/ # <<< MUITO IMPORTANTE: Mude para './dist/' se seu projeto usar 'dist'.
-          
-          # Diretório no servidor para onde os arquivos serão enviados.
-          server-dir: /home/${{ secrets.FTP_USERNAME }}/public_html/
+          # Credenciais (reutilizando os Secrets que você já criou)
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # Pode deixar assim mesmo que não use chave
+          REMOTE_HOST: ${{ secrets.FTP_SERVER }}
+          REMOTE_USER: ${{ secrets.FTP_USERNAME }}
+          REMOTE_PASSWORD: ${{ secrets.FTP_PASSWORD }}
 
-          # Opcional: Limpa o diretório de destino antes de enviar os novos arquivos.
-          # Ajuda a remover arquivos antigos que não existem mais na nova build. Use com cuidado!
-          # clean: true
+          # Pastas de origem e destino
+          SOURCE: "build/" # <<< MUITO IMPORTANTE: Mude para "dist/" se seu projeto usar 'dist'.
+          TARGET: "public_html"
+
+          # Opção para excluir arquivos no destino que não existem na origem (limpa a build antiga)
+          ARGS: "--delete"
