@@ -11,21 +11,27 @@ export default function FeedBacks() {
   const [swiperReady, setSwiperReady] = useState(false);
 
   useEffect(() => {
-    // só ativa depois que os refs estão definidos
     setSwiperReady(true);
   }, []);
 
   return (
     <>
-      <h2 id="feedbacks" className="text-4xl sm:text-5xl font-bold text-green-800 text-center m-8">
+      <h2
+        id="feedbacks"
+        className="text-3xl sm:text-4xl font-bold text-gray-900 text-center m-10"
+      >
         O que os pacientes dizem:
       </h2>
-      <div className="relative max-w-4xl mb-10 mx-auto">
+
+      <div className="relative max-w-5xl mx-auto mb-10">
         {swiperReady && (
           <Swiper
-          
             spaceBetween={20}
-            slidesPerView={2}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+            }}
             loop={true}
             modules={[Navigation, Autoplay]}
             navigation={{
@@ -37,39 +43,32 @@ export default function FeedBacks() {
               disableOnInteraction: false,
             }}
           >
-            <SwiperSlide>
-              <div className="rounded-xl">
-                <img src="../slide1.jpg" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="rounded-xl">
-                <img src="../slide1.jpg" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="rounded-xl">
-                <img src="../slide1.jpg" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="rounded-xl">
-                <img src="../slide1.jpg" />
-              </div>
-            </SwiperSlide>
+            {["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg"].map(
+              (img, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative rounded-xl overflow-hidden h-[680px] sm:h-[700px] md:h-[700px]">
+                    <img
+                      src={`../${img}`}
+                      alt={`Feedback ${index + 1}`}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                </SwiperSlide>
+              )
+            )}
           </Swiper>
         )}
 
-        {/* Botões customizados */}
+        {/* Botões */}
         <button
           ref={prevRef}
-          className="absolute top-1/2 left-0 -translate-y-1/2 p-2 bg-white rounded-full shadow transition z-10"
+          className="absolute top-1/2 left-1 -translate-y-1/2 p-2 bg-white/90 hover:bg-white rounded-full shadow transition z-10"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           ref={nextRef}
-          className="absolute top-1/2 right-0 -translate-y-1/2 p-2 bg-white rounded-full shadow transition z-10"
+          className="absolute top-1/2 right-1 -translate-y-1/2 p-2 bg-white/90 hover:bg-white rounded-full shadow transition z-10"
         >
           <ChevronRight size={24} />
         </button>

@@ -17,9 +17,9 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const numero = "5553991520395";
-    const texto = `Olá, meu nome é: ${form.nome}. 
-    Menssagem: ${form.mensagem}
+    const numero = "5553991347198";
+    const texto = `Olá, meu nome é ${form.nome}. 
+   ${form.mensagem}
     `;
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
@@ -27,7 +27,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-green-50 py-12">
+    <section id="contact" className="bg-amber-50/80 py-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function Contact() {
               <button
                 onClick={() =>
                   window.open(
-                    "https://instagram.com/conrado_soaresss",
+                    "https://instagram.com/nutri.juliamsoares",
                     "_blank"
                   )
                 }
@@ -108,7 +108,7 @@ export default function Contact() {
                 </h3>
               </div>
               <p className="text-sm pl-8 text-gray-500">
-                contato@juliasoares.nutri.br
+                juliamadeirasoares17@gmail.com
               </p>
             </div>
           </motion.div>
@@ -126,9 +126,8 @@ export default function Contact() {
                 </h3>
               </div>
               <p className="text-sm pl-8 text-gray-500">
-                Segunda a Sexta: 8h às 18h
+                Segunda, Quarta e quinta: 8h às 20h
               </p>
-              <p className="text-sm pl-8 text-gray-500">Sábado: 8h às 12h</p>
             </div>
           </motion.div>
         </div>

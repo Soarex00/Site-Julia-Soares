@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <>
-      <section id="about" className="bg-green-50 py-12 ">
+      <section id="about" className="bg-amber-50/80 py-12 ">
         {/* Título centralizado */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -53,7 +53,7 @@ export default function About() {
                   transition={{ duration: 1.3 }}
                 ></motion.div>
                 <GraduationCap
-                  className="text-green-600 md:size-13"
+                  className="text-purple-800 md:size-13"
                   size={35}
                 />
                 <h1 className="text-2xl md:text-3xl pl-4 font-bold">
@@ -110,7 +110,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-green-600 size-8  " />
+                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Saúde & Energia
                   </p>
@@ -123,7 +123,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-green-600 size-8  " />
+                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Controle de Peso
                   </p>
@@ -136,7 +136,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-green-600 size-8  " />
+                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Relação Saudável com a Comida
                   </p>
@@ -149,7 +149,8 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-green-600 size-8  " />
+                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Estilo de Vida & Resultados a Longo Prazo
                   </p>
@@ -162,12 +163,12 @@ export default function About() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2 }}
             >
-              <div className="flex gap-4 md:cursor-pointer bg-green-600 mt-5 rounded-xl md:w-[50%] mx-auto px-9 py-4 items-center justify-center cursor-pointer transition">
+              <div className="flex gap-4 md:cursor-pointer bg-green-600 mt-5 rounded-xl sm:w-[50%] md:w-[50%] mx-auto px-9 py-4 items-center justify-center cursor-pointer transition">
                 <FaWhatsapp className="text-white" size={24} />
                 <button
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5553991520395?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
+                      "https://wa.me/555391347198?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
                       "_blank"
                     )
                   }

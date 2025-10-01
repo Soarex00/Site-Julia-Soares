@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-900 text-gray-200 py-10">
+    <footer className="bg-purple-900 text-gray-200 py-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo / Nome */}
         <div>
@@ -110,7 +110,7 @@ export default function Footer() {
               transition={{ delay: 0.2 }}
             >
               <a
-                href="https://wa.me/5553991520395"
+                href="https://wa.me/5553991347198"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-green-400"
@@ -125,42 +125,12 @@ export default function Footer() {
               transition={{ delay: 0.2 }}
             >
               <a
-                href="https://instagram.com/conrado_soaresss"
+                href="https://instagram.com/nutri.juliamsoares"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-400"
               >
                 <FaInstagram size={24} />
-              </a>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.2 }}
-            >
-              <a
-                href="https://instagram.com/conrado_soaresss"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-blue-600"
-              >
-                <Linkedin size={24} />
-              </a>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.2 }}
-            >
-              <a
-                href="https://instagram.com/conrado_soaresss"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-black"
-              >
-                <Twitter size={24} />
               </a>
             </motion.div>
           </div>
@@ -187,7 +157,7 @@ export default function Footer() {
         <div className="flex justify-center mt-5">
           Desenvolvido por
           <a
-            href="https://www.linkedin.com/in/seu-perfil"
+            href="https://instagram.com/conrado_soaresss"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-500 hover:underline ml-1"

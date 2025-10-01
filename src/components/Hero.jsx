@@ -9,7 +9,7 @@ export default function Section() {
 
     <section className="relative min-h-screen md:min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center overflow-hidden">
       {/* Fundo */}
-      <div className="absolute inset-0 bg-cover bg-center bg-[url('/fruta.png')]"></div>
+      <div className="absolute inset-0 bg-cover bg-center"></div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-amber-50/80"></div>
@@ -21,7 +21,7 @@ export default function Section() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-green-600">
+          <h2 className="text-5xl md:text-6xl font-bold text-purple-800">
             Júlia Madeira Soares
           </h2>
         </motion.div>
@@ -41,12 +41,12 @@ export default function Section() {
         >
           <p className="text-xl md:text-2xl font-light text-gray-900 max-w-2xl mx-auto leading-relaxed m-6 md:m-10">
             Transforme sua relação com a alimentação e conquiste uma vida mais
-            <span className="ml-0.5 text-green-600 font-semibold">
+            <span className="ml-0.5 text-purple-800 font-semibold">
               {" "}
               saudável{" "}
             </span>{" "}
             e
-            <span className="ml-0.5 text-green-600 font-semibold">
+            <span className="ml-0.5 text-purple-800 font-semibold">
               {" "}
               equilibrada{" "}
             </span>
@@ -57,16 +57,16 @@ export default function Section() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
-          <div className="flex gap-4 md:cursor-pointer bg-white mb-1 mt-5 rounded-xl md:w-[50%] mx-auto px-9 py-4 items-center justify-center cursor-pointer transition">
-            <FaWhatsapp className="text-green-600" size={24} />
+          <div className="flex gap-4 md:cursor-pointer bg-green-600 mb-1 mt-5 rounded-xl md:w-[50%] mx-auto px-9 py-4 items-center justify-center cursor-pointer transition">
+            <FaWhatsapp className="text-white" size={24} />
             <button
               onClick={() =>
                 window.open(
-                  "https://wa.me/5553991520395?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
+                  "https://wa.me/555391347198?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
                   "_blank"
                 )
               }
-              className=" text-green-600 md:cursor-pointer font-semibold"
+              className=" text-white md:cursor-pointer font-semibold"
             >
               Agende sua consulta
             </button>
@@ -80,7 +80,7 @@ export default function Section() {
           transition={{ delay: 1.2 }}
         >
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 animate-bounce mt-25 text-green-600/60 cursor-pointer"
+            className="absolute left-1/2 transform -translate-x-1/2 animate-bounce mt-25 text-purple-800/60 cursor-pointer"
             onClick={() => window.scrollBy({ top: 300, behavior: "smooth" })}
           >
             <ChevronDown size={40} />
