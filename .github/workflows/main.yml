@@ -16,6 +16,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+        # ... (passo 'Checkout code' fica aqui em cima)
+
+      # NOVO PASSO PARA DESCOBRIR O IP
+      - name: Print Runner IP address
+        run: echo "O endereço de IP deste servidor é:" && curl -s ifconfig.me
+
+      # O PASSO DE DEPLOY VEM DEPOIS
+      - name: Deploy to Hostinger
+        uses: easingthemes/ssh-deploy@v5.0.0
+        # ... (o resto do seu código de deploy)
+
       # 2. Deploy para Hostinger usando a Action correta para SFTP/SSH
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@v5.0.0 # <<< Usando a nova Action
