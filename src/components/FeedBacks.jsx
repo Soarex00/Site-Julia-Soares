@@ -43,14 +43,14 @@ export default function FeedBacks() {
               disableOnInteraction: false,
             }}
           >
-            {["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg"].map(
+            {["slide1.jpg", "slide3.jpg", "slide4.jpg"].map(
               (img, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative rounded-xl overflow-hidden h-[680px] sm:h-[700px] md:h-[700px]">
+                  <div className="relative rounded-xl overflow-hidden h-[600px] sm:h-[600px] md:h-[600px]">
                     <img
                       src={`../${img}`}
                       alt={`Feedback ${index + 1}`}
-                      className="w-full h-full object-cover object-center"
+                      className="w-50% h-50% object-cover object-center"
                     />
                   </div>
                 </SwiperSlide>

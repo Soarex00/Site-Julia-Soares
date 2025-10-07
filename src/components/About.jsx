@@ -53,7 +53,7 @@ export default function About() {
                   transition={{ duration: 1.3 }}
                 ></motion.div>
                 <GraduationCap
-                  className="text-purple-800 md:size-13"
+                  className="text-rose-900 md:size-13"
                   size={35}
                 />
                 <h1 className="text-2xl md:text-3xl pl-4 font-bold">
@@ -110,7 +110,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+                  <BadgeCheck className="text-rose-900 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Saúde & Energia
                   </p>
@@ -123,9 +123,9 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+                  <BadgeCheck className="text-rose-900 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                   <p className=" text-gray-500 md:ml-0 space-y-3">
-                    Controle de Peso
+                    Perda e Controle de Peso
                   </p>
                 </div>
               </motion.div>
@@ -136,7 +136,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+                  <BadgeCheck className="text-rose-900 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Relação Saudável com a Comida
                   </p>
@@ -149,7 +149,7 @@ export default function About() {
                 transition={{ delay: 0.2 }}
               >
                 <div className="flex items-center justify-center gap-4 rounded-xl">
-                  <BadgeCheck className="text-purple-600 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+                  <BadgeCheck className="text-rose-900 w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10" />
 
                   <p className=" text-gray-500 md:ml-0 space-y-3">
                     Estilo de Vida & Resultados a Longo Prazo

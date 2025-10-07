@@ -87,7 +87,7 @@ export default function Contact() {
                     "_blank"
                   )
                 }
-                className="flex bg-[#833AB4] text-white mt-5 px-9 py-4 md:cursor-pointer rounded-2xl font-semibold shadow"
+                className="flex bg-purple-900 text-white mt-5 px-9 py-4 md:cursor-pointer rounded-2xl font-semibold shadow"
               >
                 Ir para Instagram
               </button>
@@ -108,7 +108,7 @@ export default function Contact() {
                 </h3>
               </div>
               <p className="text-sm pl-8 text-gray-500">
-                juliamadeirasoares17@gmail.com
+                contato@nutrijuliamsoares.com
               </p>
             </div>
           </motion.div>

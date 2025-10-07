@@ -9,10 +9,10 @@ export default function Section() {
 
     <section className="relative min-h-screen md:min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center overflow-hidden">
       {/* Fundo */}
-      <div className="absolute inset-0 bg-cover bg-center"></div>
+      <div className="absolute inset-0 bg-[url('./public/foto_fundo2.png')] bg-cover bg-center"></div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-amber-50/80"></div>
+      <div className="absolute inset-0 bg-amber-50/0"></div>
 
       {/* Conteúdo */}
       <div className="relative z-10 text-center px-4">
@@ -21,35 +21,36 @@ export default function Section() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-purple-800">
+          {/* <h2 className="text-5xl md:text-6xl font-bold text-purple-800">
             Júlia Madeira Soares
-          </h2>
+          </h2> */}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <p className="text-lg md:text-xl mb-4 text-gray-900">
+          {/* <p className="text-lg md:text-xl mb-4 text-gray-900">
             Nutricionista Clínica
-          </p>
+          </p> */}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
         >
-          <p className="text-xl md:text-2xl font-light text-gray-900 max-w-2xl mx-auto leading-relaxed m-6 md:m-10">
-            Transforme sua relação com a alimentação e conquiste uma vida mais
-            <span className="ml-0.5 text-purple-800 font-semibold">
+          <p className="text-2xl md:text-3xl text-gray-900 max-w-4xl mx-auto leading-relaxed m-6 md:m-10">
+            Chegou a hora de mudar sua relação com a comida e conquistar o
+            <span className="ml-0.5 text-rose-900 font-semibold">
               {" "}
-              saudável{" "}
+              corpo{" "}
             </span>{" "}
-            e
-            <span className="ml-0.5 text-purple-800 font-semibold">
+            e a
+            <span className="ml-0.5 text-rose-900 font-semibold">
               {" "}
-              equilibrada{" "}
+              saúde{" "}
             </span>
+            que você merece.
           </p>
         </motion.div>
         <motion.div
@@ -80,7 +81,7 @@ export default function Section() {
           transition={{ delay: 1.2 }}
         >
           <div
-            className="absolute left-1/2 transform -translate-x-1/2 animate-bounce mt-25 text-purple-800/60 cursor-pointer"
+            className="absolute left-1/2 transform -translate-x-1/2 animate-bounce mt-25 text-gray-900 cursor-pointer"
             onClick={() => window.scrollBy({ top: 300, behavior: "smooth" })}
           >
             <ChevronDown size={40} />

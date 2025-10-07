@@ -22,7 +22,7 @@ export default function Benefits() {
                 md:hover:scale-105 rounded-xl shadow-sm flex flex-col gap-2 w-[100%] md:w-[100%]  p-4 md:p-8  border"
             >
               <h3 className="text-lg font-semibold text-gray-800">
-                <span className="text-purple-800">Flexibilidade</span> no seu
+                <span className="text-rose-900">Flexibilidade</span> no seu
                 atendimento
               </h3>
               <p className="text-sm text-gray-500">
@@ -37,7 +37,7 @@ export default function Benefits() {
                 md:hover:scale-105 rounded-xl shadow-sm flex flex-col gap-2 w-[100%] md:w-[100%] p-4 md:p-8  border"
             >
               <h3 className="text-lg font-semibold text-gray-800">
-                Emagrecimento <span className="text-purple-800">Saudável</span>
+                Emagrecimento <span className="text-rose-900">Saudável</span>
               </h3>
               <p className="text-sm text-gray-500">Sem dietas restritivas</p>
             </div>
@@ -49,7 +49,7 @@ export default function Benefits() {
                 md:hover:scale-105 rounded-xl shadow-sm flex flex-col gap-2 w-[100%] md:w-[100%]  p-4 md:p-8  border"
             >
               <h3 className="text-lg font-semibold text-gray-800">
-                Planos <span className="text-purple-800">Personalizados</span>
+                Planos <span className="text-rose-900">Personalizados</span>
               </h3>
               <p className="text-sm text-gray-500">
                 Nada de dieta genérica, tudo adaptado ao estilo de vida da
@@ -64,7 +64,7 @@ export default function Benefits() {
                 md:hover:scale-105 rounded-xl shadow-sm flex flex-col gap-2 w-[100%] md:w-[100%] p-4 md:p-8  border"
             >
               <h3 className="text-lg font-semibold text-gray-800">
-                Melhora na <span className="text-purple-800">Saúde</span>
+                Melhora na <span className="text-rose-900">Saúde</span>
               </h3>
               <p className="text-sm text-gray-500">
                 Mais energia, sono regulado, intestino funcionando bem.
