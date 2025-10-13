@@ -1,5 +1,4 @@
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
-import { Linkedin, Twitter } from "lucide-react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
@@ -136,6 +135,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       {/* Direitos autorais */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -143,7 +143,7 @@ export default function Footer() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400 text-sm">
+        <div className="border-t  border-gray-700 mt-8 pt-4 text-center text-gray-400 text-sm">
           © {new Date().getFullYear()} Julia Madeira Soares. Todos os direitos
           reservados.
         </div>
@@ -154,7 +154,7 @@ export default function Footer() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ delay: 0.2 }}
       >
-        <div className="flex justify-center mt-5">
+        <div className="flex  justify-center mt-5">
           Desenvolvido por
           <a
             href="https://instagram.com/conrado_soaresss"

@@ -73,20 +73,15 @@ export default function Benefits() {
           </motion.button>
         </div>
       </div>
-      <div className="flex gap-4 bg-green-600 mb-[20%] mt-[10%] w-[80%] rounded-xl md:w-[30%] mx-auto cursor-pointer px-9 py-4 items-center justify-center">
-        <FaWhatsapp className="text-white" size={24} />
-        <button
-          onClick={() =>
-            window.open(
-              "https://wa.me/555391347198?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
-              "_blank"
-            )
-          }
-          className="bg-green-600 cursor-pointer text-white  font-semibold"
-        >
-          Agende sua consulta
-        </button>
-      </div>
+      <a
+        href="https://wa.me/555391347198?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex gap-4 text-white bg-green-600 mb-[20%] mt-[10%] w-[80%] rounded-xl md:w-[30%] mx-auto cursor-pointer px-9 py-4 items-center justify-center"
+      >
+        <FaWhatsapp size={24} />
+        <span>Agende sua consulta</span>
+      </a>
     </>
   );
 }

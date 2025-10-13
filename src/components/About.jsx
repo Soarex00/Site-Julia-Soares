@@ -52,10 +52,7 @@ export default function About() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 1.3 }}
                 ></motion.div>
-                <GraduationCap
-                  className="text-rose-900 md:size-13"
-                  size={35}
-                />
+                <GraduationCap className="text-rose-900 md:size-13" size={35} />
                 <h1 className="text-2xl md:text-3xl pl-4 font-bold">
                   Formação & Experiência
                 </h1>
@@ -163,20 +160,15 @@ export default function About() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2 }}
             >
-              <div className="flex gap-4 md:cursor-pointer bg-green-600 mt-5 rounded-xl sm:w-[50%] md:w-[50%] mx-auto px-9 py-4 items-center justify-center cursor-pointer transition">
-                <FaWhatsapp className="text-white" size={24} />
-                <button
-                  onClick={() =>
-                    window.open(
-                      "https://wa.me/555391347198?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta.",
-                      "_blank"
-                    )
-                  }
-                  className=" bg-green-600 md:cursor-pointer text-white  font-semibold  "
-                >
-                  Agende sua consulta
-                </button>
-              </div>
+              <a
+                href="https://wa.me/555391347198?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20consulta."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-4 text-white bg-green-600 mb-[20%] mt-[10%] w-[80%] rounded-xl md:w-[30%] mx-auto cursor-pointer px-9 py-4 items-center justify-center"
+              >
+                <FaWhatsapp size={24} />
+                <span>Agende sua consulta</span>
+              </a>
             </motion.div>
           </div>
         </div>
